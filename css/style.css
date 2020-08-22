@@ -35,6 +35,10 @@
   border: 1px white solid;
 }
 
+.btn-secondary:hover {
+  background: linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+
 nav {
   width: 100%;
   max-height: 10vh;
@@ -118,6 +122,118 @@ nav .container .nav-links a {
 .products .container .card .product-image {
   display: flex;
   justify-content: center;
+}
+
+.connected .first-card {
+  width: 100%;
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.connected .first-card .bg-connect {
+  height: 70vh;
+  background: url("../img/about-img.png") no-repeat;
+  width: 100%;
+  max-width: 50%;
+}
+.connected .first-card .title-connect {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.connected .first-card .title-connect .we-para {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.connected .first-card .title-connect p {
+  margin: 2rem 0rem;
+}
+.connected .first-card.second {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  flex-direction: row-reverse !important;
+}
+.connected .first-card.second .bg-connect {
+  background: url("../img/video-bg.jpg") no-repeat center/cover;
+  position: relative;
+  display: flex;
+  max-width: 50%;
+  height: 380px;
+}
+.connected .first-card.second .bg-connect .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  opacity: 0.7;
+}
+.connected .first-card.second .bg-connect i {
+  color: white;
+  margin: auto;
+  font-size: 70px;
+  z-index: 2;
+  cursor: pointer;
+}
+.connected .first-card.second .title-connect {
+  max-width: 50%;
+}
+.connected .first-card.second .title-connect h1 {
+  font: normal 700 50px/70px "Abel", cursive;
+}
+.connected .first-card.second .title-connect .gradient {
+  color: #8a90ff;
+}
+
+.features {
+  padding: 100px 0;
+  width: 100%;
+  background: url("../img/feature-bg.jpg") no-repeat center/cover;
+}
+.features .features-title {
+  text-align: center;
+  color: white;
+}
+.features .features-title h3 {
+  font-size: 50px;
+}
+.features .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+.features .container .card {
+  border-radius: 8px;
+  padding: 40px 30px;
+  margin: 2rem 1rem;
+  background: white;
+  width: 100%;
+  max-width: 31%;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+.features .container .card .card-title {
+  transition: color 0.7s ease;
+  display: flex;
+  align-items: center;
+}
+.features .container .card .card-title h3 {
+  margin-left: 1rem;
+}
+.features .container .card .card-title:hover {
+  color: #8a90ff;
+}
+.features .container .card p {
+  margin-top: 1rem;
+  color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */

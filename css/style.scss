@@ -47,6 +47,10 @@ $Abel: "Abel", cursive;
   }
 }
 
+.btn-secondary:hover {
+  background: $gradient;
+}
+
 // END GLOBAL
 
 nav {
@@ -133,6 +137,123 @@ nav {
       .product-image {
         display: flex;
         justify-content: center;
+      }
+    }
+  }
+}
+
+.connected {
+  .first-card {
+    width: 100%;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bg-connect {
+      height: 70vh;
+      background: url("../img/about-img.png") no-repeat;
+      width: 100%;
+      max-width: 50%;
+    }
+    .title-connect {
+      padding: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      .we-para {
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+      }
+      p {
+        margin: 2rem 0rem;
+      }
+    }
+    &.second {
+      width: 100%;
+      margin: 0 auto;
+
+      max-width: 1100px;
+      flex-direction: row-reverse !important;
+      .bg-connect {
+        background: url("../img/video-bg.jpg") no-repeat center/cover;
+        position: relative;
+        display: flex;
+        max-width: 50%;
+        height: 380px;
+        .overlay {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: $gradient;
+          opacity: 0.7;
+        }
+        i {
+          color: white;
+          margin: auto;
+          font-size: 70px;
+          z-index: 2;
+          cursor: pointer;
+        }
+      }
+      .title-connect {
+        max-width: 50%;
+        h1 {
+          font: normal 700 50px/70px $Abel;
+        }
+        .gradient {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  padding: 100px 0;
+  width: 100%;
+  background: url("../img/feature-bg.jpg") no-repeat center/cover;
+  .features-title {
+    text-align: center;
+    color: white;
+    h3 {
+      font-size: 50px;
+    }
+  }
+  .container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    .card {
+      border-radius: 8px;
+      padding: 40px 30px;
+      margin: 2rem 1rem;
+      background: white;
+      width: 100%;
+      max-width: 31%;
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+
+      .card-title {
+        transition: color 0.7s ease;
+        display: flex;
+        align-items: center;
+        h3 {
+          margin-left: 1rem;
+        }
+        &:hover {
+          color: $blue;
+        }
+      }
+      p {
+        margin-top: 1rem;
+        color: grey;
       }
     }
   }

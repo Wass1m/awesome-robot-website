@@ -1,0 +1,123 @@
+@import url("./fonts.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Anton, cursive;
+}
+
+.text-title {
+  font: normal 700 70px/70px "Abel", cursive;
+}
+
+.para {
+  font-family: "Abel", cursive;
+  font: normal 500 20px/25px "Abel", cursive;
+}
+
+.btn {
+  background: white;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px black solid;
+  color: black;
+  padding: 0.7rem 2rem;
+  background-clip: padding-box;
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+  transition: background 1s ease, border 0.6s ease;
+  position: relative;
+}
+.btn:hover {
+  background: transparent;
+  background-clip: padding-box;
+  color: white;
+  border: 1px white solid;
+}
+
+nav {
+  width: 100%;
+  max-height: 10vh;
+  position: absolute;
+  top: 0;
+  background-color: #777;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 4rem;
+}
+nav .container .nav-links a {
+  color: white;
+  margin-left: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.bg-site {
+  width: 100%;
+  background: url("../img/banner-bg.jpg") no-repeat;
+  height: 100vh;
+  display: flex;
+}
+.bg-site .container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  margin: 0rem 14rem;
+}
+.bg-site .container .site-title span {
+  display: block;
+}
+.bg-site .container .site-title h1 {
+  color: white;
+}
+.bg-site .container .site-title p {
+  color: white;
+}
+.bg-site .container .site-title a {
+  margin-top: 2rem;
+}
+
+.products {
+  padding: 1rem 6rem;
+  width: 100%;
+}
+.products .title {
+  text-align: center;
+}
+.products .title h3 {
+  font-size: 50px;
+}
+.products .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+.products .container .card {
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 23%;
+  background: #f9f9ff;
+}
+.products .container .card:hover {
+  box-shadow: 0px 10px 30px 0px rgba(212, 150, 255, 0.2);
+}
+.products .container .card .product-text {
+  text-align: center;
+  padding: 2rem 2rem;
+}
+.products .container .card .product-text p {
+  margin: 1rem 0rem;
+}
+.products .container .card .product-text a:hover {
+  background: linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+}
+.products .container .card .product-image {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

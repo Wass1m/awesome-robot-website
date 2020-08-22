@@ -1,0 +1,139 @@
+@import url("./fonts.css");
+$wt: #fff;
+$bl: #000;
+$grey: #777;
+$greybg: #f9f9ff;
+$iconbg: #111;
+$bdc: #eee;
+$blue: #8a90ff;
+$boxshadow: 0px 10px 30px 0px rgba(212, 150, 255, 0.2);
+$gradient: linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+$Abel: "Abel", cursive;
+// GLOBAL
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Anton, cursive;
+}
+
+.text-title {
+  font: normal 700 70px/70px $Abel;
+}
+
+.para {
+  font-family: $Abel;
+  font: normal 500 20px/25px $Abel;
+}
+
+.btn {
+  background: white;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px black solid;
+  color: black;
+  padding: 0.7rem 2rem;
+  background-clip: padding-box;
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+  transition: background 1s ease, border 0.6s ease;
+  position: relative;
+  &:hover {
+    background: transparent;
+    background-clip: padding-box;
+    color: white;
+    border: 1px white solid;
+  }
+}
+
+// END GLOBAL
+
+nav {
+  width: 100%;
+  max-height: 10vh;
+  position: absolute;
+  top: 0;
+  background-color: $grey;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 4rem;
+    .nav-links {
+      a {
+        color: white;
+        margin-left: 3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.bg-site {
+  width: 100%;
+  background: url("../img/banner-bg.jpg") no-repeat;
+  height: 100vh;
+  display: flex;
+  .container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    margin: 0rem 14rem;
+
+    .site-title span {
+      display: block;
+    }
+    .site-title h1 {
+      color: white;
+    }
+    .site-title p {
+      color: white;
+    }
+    .site-title a {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.products {
+  padding: 1rem 6rem;
+  width: 100%;
+  .title {
+    text-align: center;
+    h3 {
+      font-size: 50px;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+
+    .card {
+      &:hover {
+        box-shadow: $boxshadow;
+      }
+      padding: 1rem 2rem;
+      width: 100%;
+      max-width: 23%;
+      background: #f9f9ff;
+      .product-text {
+        text-align: center;
+        padding: 2rem 2rem;
+        p {
+          margin: 1rem 0rem;
+        }
+        a:hover {
+          background: $gradient;
+        }
+      }
+      .product-image {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -306,9 +307,13 @@ nav .nav-active {
   height: 340px;
   background: url("../img/b1.jpg") no-repeat center/cover;
   border-radius: 14px;
+  transition: transform 0.7s ease;
 }
 .latest-news .container .news .news-image.second {
   background: url("../img/b2.jpg") no-repeat center/cover;
+}
+.latest-news .container .news .news-image img:hover {
+  filter: opacity(0);
 }
 .latest-news .container .news .news-buttons {
   padding: 1rem 0;

@@ -1,9 +1,14 @@
 @import url("./fonts.css");
+html,
+body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Anton, cursive;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Anton", cursive;
 }
 
 .text-title {
@@ -44,37 +49,51 @@
 }
 
 nav {
-  width: 100%;
-  max-height: 10vh;
-  position: absolute;
-  top: 0;
+  min-height: 10vh;
   background-color: #777;
-}
-nav .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 1rem 4rem;
 }
-nav .container .nav-links a {
+nav .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+nav .nav-links a {
   color: white;
-  margin-left: 3rem;
   text-decoration: none;
   text-transform: uppercase;
+}
+nav .burger {
+  display: none;
+  cursor: pointer;
+}
+nav .burger div {
+  height: 3px;
+  width: 30px;
+  margin: 5px;
+  background-color: white;
+}
+nav .nav-active {
+  transform: translateX(0%) !important;
 }
 
 .bg-site {
   width: 100%;
   background: url("../img/banner-bg.jpg") no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
 }
 .bg-site .container {
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   display: flex;
   width: 100%;
-  margin: 0rem 14rem;
+  margin: 0 auto;
+  max-width: 1100px;
 }
 .bg-site .container .site-title span {
   display: block;
@@ -101,13 +120,14 @@ nav .container .nav-links a {
 }
 .products .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding: 2rem 2rem;
 }
 .products .container .card {
   padding: 1rem 2rem;
-  width: 100%;
-  max-width: 23%;
+  width: 20rem;
+  margin: 1rem 0;
   background: #f9f9ff;
 }
 .products .container .card:hover {
@@ -216,10 +236,9 @@ nav .container .nav-links a {
 .features .container .card {
   border-radius: 8px;
   padding: 40px 30px;
-  margin: 2rem 1rem;
+  margin: 2rem 3rem;
   background: white;
-  width: 100%;
-  max-width: 31%;
+  width: 20rem;
   display: flex;
   cursor: pointer;
   flex-direction: column;
@@ -249,7 +268,11 @@ nav .container .nav-links a {
   width: 100%;
   max-width: 1110px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+.brands .container .brand {
+  margin: 1rem 2rem;
 }
 .brands .container .brand img {
   transition: filter 0.6s ease;
@@ -272,11 +295,11 @@ nav .container .nav-links a {
   margin: 0 auto;
   max-width: 1100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .latest-news .container .news {
-  width: 100%;
-  max-width: 48%;
+  width: 30rem;
 }
 .latest-news .container .news .news-image {
   width: 100%;
@@ -308,7 +331,11 @@ nav .container .nav-links a {
   margin: 0 auto;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+.footer .container div {
+  margin: 1rem 0rem;
 }
 .footer .container .top-products li {
   margin-top: 0.4rem;
@@ -339,6 +366,65 @@ nav .container .nav-links a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1400px) {
+  .connected .first-card {
+    flex-direction: column;
+  }
+  .connected .first-card .bg-connect {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1140px) {
+  nav .nav-links {
+    width: 60%;
+  }
+
+  .latest-news .container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  .features .container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 867px) {
+  .bg-site .container .site-title,
+.bg-site .container .bg-robot {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 760px) {
+  nav .burger {
+    display: block;
+  }
+
+  nav .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 10vh;
+    height: 100vh;
+    z-index: 100;
+    background-color: #777;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    transform: translateX(100%);
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .connected .first-card.second {
+    flex-direction: column-reverse !important;
+  }
+  .connected .first-card.second .bg-connect {
+    max-width: 90%;
+  }
+  .connected .first-card.second .title-connect {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
